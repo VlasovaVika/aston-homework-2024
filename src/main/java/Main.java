@@ -8,6 +8,6 @@ public class Main {
         Methods.compareWithZero(2);
         Methods.isIntNegative(2);
         Methods.printLine("Java", 4);
-        Methods.isYearLeap(2100);
+        Methods.isYearLeap(2024);
     }
 }

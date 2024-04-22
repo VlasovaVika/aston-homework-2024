@@ -69,11 +69,13 @@ public class Methods {
 
     public static void isYearLeap(int year) {
         boolean flag;
-        if (year % 4 == 0 || year % 400 == 0){
-            if ( year% 100 ==0){
+        if (year % 100 == 0) {
+            if (year % 400 == 0) {
+                flag = true;
+            } else {
                 flag = false;
-                System.out.println(flag);
             }
+        } else if (year % 4 == 0) {
             flag = true;
         } else {
             flag = false;
