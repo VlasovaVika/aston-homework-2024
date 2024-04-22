@@ -9,5 +9,7 @@ public class Main {
         Methods.isIntNegative(2);
         Methods.printLine("Java", 4);
         Methods.isYearLeap(2024);
+        int[] arr = new int[]{1,1,1,0};
+        Methods.recreateArray(arr);
     }
 }

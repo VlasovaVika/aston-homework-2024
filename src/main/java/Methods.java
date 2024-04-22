@@ -1,3 +1,5 @@
+import java.io.FilterOutputStream;
+
 public class Methods {
     public static void printThreeWords() {
         System.out.println("Orange");
@@ -81,6 +83,22 @@ public class Methods {
             flag = false;
         }
         System.out.println(flag);
+    }
+
+    public static void recreateArray(int[] arr) {
+        int[] arr2 = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length; j++) {
+                if (arr[i] == 1) {
+                    arr2[j] = 0;
+                } else if (arr[i] == 0) {
+                    arr2[j] = 1;
+                }
+            }
+        }
+        for (int element : arr2) {
+            System.out.print(element + " ");
+        }
     }
 
 }
