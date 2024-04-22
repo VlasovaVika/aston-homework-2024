@@ -14,5 +14,41 @@ public class Methods {
         }
     }
 
+    public static void printColor(int value) {
+        if (value <= 0) {
+            System.out.println("Красный");
+        } else if (0 < value && value <= 100) {
+            System.out.println("Желтый");
+        } else if (value > 100) {
+            System.out.println("Зеленый");
+        }
+    }
+
+    public static void compareNumbers(int a, int b) {
+        if (a >= b) {
+            System.out.println("a >= b");
+        } else {
+            System.out.println("a < b");
+        }
+    }
+    public static void isSumOfIntsInThisRange(int a, int b){
+        boolean flag;
+        int sum = a + b;
+        if (10<=sum && sum<=20) {
+            flag = true;
+        } else {
+            flag = false;
+        }
+        System.out.println(flag);
+    }
+
+    public static void isIntOddOrEven(int a){
+        if (a>=0){
+            System.out.println("Число положительное");
+        } else {
+            System.out.println("Число отрицательное");
+        }
+    }
+
 
 }
