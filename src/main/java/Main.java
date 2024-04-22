@@ -5,6 +5,9 @@ public class Main {
         Methods.printColor(-3);
         Methods.compareNumbers(-1,0);
         Methods.isSumOfIntsInThisRange(12,12);
-        Methods.isIntOddOrEven(-9);
+        Methods.compareWithZero(2);
+        Methods.isIntNegative(2);
+        Methods.printLine("Java", 4);
+        Methods.isYearLeap(2100);
     }
 }

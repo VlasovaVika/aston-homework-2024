@@ -31,10 +31,11 @@ public class Methods {
             System.out.println("a < b");
         }
     }
-    public static void isSumOfIntsInThisRange(int a, int b){
+
+    public static void isSumOfIntsInThisRange(int a, int b) {
         boolean flag;
         int sum = a + b;
-        if (10<=sum && sum<=20) {
+        if (10 <= sum && sum <= 20) {
             flag = true;
         } else {
             flag = false;
@@ -42,13 +43,42 @@ public class Methods {
         System.out.println(flag);
     }
 
-    public static void isIntOddOrEven(int a){
-        if (a>=0){
+    public static void compareWithZero(int a) {
+        if (a >= 0) {
             System.out.println("Число положительное");
         } else {
             System.out.println("Число отрицательное");
         }
     }
 
+    public static void isIntNegative(int a) {
+        boolean flag;
+        if (a < 0) {
+            flag = true;
+        } else {
+            flag = false;
+        }
+        System.out.println(flag);
+    }
+
+    public static void printLine(String str, int a) {
+        for (int i = 0; i < a; i++) {
+            System.out.println(str);
+        }
+    }
+
+    public static void isYearLeap(int year) {
+        boolean flag;
+        if (year % 4 == 0 || year % 400 == 0){
+            if ( year% 100 ==0){
+                flag = false;
+                System.out.println(flag);
+            }
+            flag = true;
+        } else {
+            flag = false;
+        }
+        System.out.println(flag);
+    }
 
 }
