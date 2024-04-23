@@ -11,5 +11,7 @@ public class Main {
         Methods.isYearLeap(2024);
         int[] arr = new int[]{0,0,1,0};
         Methods.recreateArray(arr);
+        System.out.println();
+        Methods.createArray(100);
     }
 }

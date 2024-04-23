@@ -99,4 +99,12 @@ public class Methods {
         }
     }
 
+    public static void createArray(int a) {
+        int[] arr = new int[a];
+        for (int i = 0; i < a; i++) {
+            arr[i] = i + 1;
+            System.out.print(arr[i] + " ");
+        }
+    }
+
 }
