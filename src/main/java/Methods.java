@@ -88,12 +88,10 @@ public class Methods {
     public static void recreateArray(int[] arr) {
         int[] arr2 = new int[arr.length];
         for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr.length; j++) {
-                if (arr[i] == 1) {
-                    arr2[j] = 0;
-                } else if (arr[i] == 0) {
-                    arr2[j] = 1;
-                }
+            if (arr[i] == 1) {
+                arr2[i] = 0;
+            } else {
+                arr2[i] = 1;
             }
         }
         for (int element : arr2) {
