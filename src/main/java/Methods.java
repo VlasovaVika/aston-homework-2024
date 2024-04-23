@@ -1,5 +1,3 @@
-import java.io.FilterOutputStream;
-
 public class Methods {
     public static void printThreeWords() {
         System.out.println("Orange");
@@ -120,5 +118,19 @@ public class Methods {
             System.out.print(element + " ");
         }
     }
+
+    public static void createSquareArray(int a) {
+        int[][] arr = new int[a][a];
+        for (int i = 0; i < a; i++) {
+            arr[i][i] = 1;
+        }
+        for (int j = 0; j < arr.length; j++) {
+            for (int k = 0; k < arr.length; k++) {
+                System.out.print(arr[j][k] + " ");
+            }
+            System.out.println();
+        }
+    }
+
 
 }

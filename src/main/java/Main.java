@@ -16,5 +16,7 @@ public class Main {
         System.out.println();
         int [] arr2 = new int[]{1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
         Methods.filterAndRecreateArray(arr2);
+        System.out.println();
+        Methods.createSquareArray(5);
     }
 }
