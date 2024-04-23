@@ -13,5 +13,8 @@ public class Main {
         Methods.recreateArray(arr);
         System.out.println();
         Methods.createArray(100);
+        System.out.println();
+        int [] arr2 = new int[]{1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        Methods.filterAndRecreateArray(arr2);
     }
 }
