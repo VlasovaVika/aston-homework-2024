@@ -32,7 +32,7 @@ public class Methods {
         }
     }
 
-    public static void isSumOfIntsInThisRange(int a, int b) {
+    public static boolean isSumOfIntsInThisRange(int a, int b) {
         boolean flag;
         int sum = a + b;
         if (10 <= sum && sum <= 20) {
@@ -40,7 +40,7 @@ public class Methods {
         } else {
             flag = false;
         }
-        System.out.println(flag);
+        return flag;
     }
 
     public static void compareWithZero(int a) {

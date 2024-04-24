@@ -4,7 +4,7 @@ public class Main {
         Methods.checkSumSign(2, -2);
         Methods.printColor(102);
         Methods.compareNumbers(-1, 0);
-        Methods.isSumOfIntsInThisRange(12, 12);
+        Methods.isSumOfIntsInThisRange(10, 12);
         Methods.compareWithZero(2);
         Methods.isIntNegative(2);
         Methods.printLine("Java", 4);
