@@ -44,14 +44,8 @@ public class Methods {
         }
     }
 
-    public static void isIntNegative(int a) {
-        boolean flag;
-        if (a < 0) {
-            flag = true;
-        } else {
-            flag = false;
-        }
-        System.out.println(flag);
+    public static boolean isIntNegative(int a) {
+        return a < 0;
     }
 
     public static void printLine(String str, int a) {
