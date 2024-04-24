@@ -33,14 +33,7 @@ public class Methods {
     }
 
     public static boolean isSumOfIntsInThisRange(int a, int b) {
-        boolean flag;
-        int sum = a + b;
-        if (10 <= sum && sum <= 20) {
-            flag = true;
-        } else {
-            flag = false;
-        }
-        return flag;
+        return 10 <= (a+b) && (a+b)<= 20;
     }
 
     public static void compareWithZero(int a) {
