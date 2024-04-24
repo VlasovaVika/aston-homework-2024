@@ -81,15 +81,12 @@ public class Methods {
     }
 
     public static void filterAndRecreateArray(int[] arr) {
-        int[] arr2 = new int[arr.length];
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] < 6) {
-                arr2[i] = arr[i] * 2;
-            } else {
-                arr2[i] = arr[i];
+                arr[i] = arr[i] * 2;
             }
         }
-        for (int element : arr2) {
+        for (int element : arr) {
             System.out.print(element + " ");
         }
     }
