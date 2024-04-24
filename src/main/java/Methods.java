@@ -33,7 +33,7 @@ public class Methods {
     }
 
     public static boolean isSumOfIntsInThisRange(int a, int b) {
-        return 10 <= (a+b) && (a+b)<= 20;
+        return 10 <= (a + b) && (a + b) <= 20;
     }
 
     public static void compareWithZero(int a) {
@@ -54,20 +54,8 @@ public class Methods {
         }
     }
 
-    public static void isYearLeap(int year) {
-        boolean flag;
-        if (year % 100 == 0) {
-            if (year % 400 == 0) {
-                flag = true;
-            } else {
-                flag = false;
-            }
-        } else if (year % 4 == 0) {
-            flag = true;
-        } else {
-            flag = false;
-        }
-        System.out.println(flag);
+    public static boolean isYearLeap(int year) {
+        return ((year % 100 == 0 && year % 400 == 0) || (year % 4 == 0 && year % 100 != 0));
     }
 
     public static void recreateArray(int[] arr) {
