@@ -19,7 +19,7 @@ public class Methods {
             System.out.println("Красный");
         } else if (0 < value && value <= 100) {
             System.out.println("Желтый");
-        } else if (value > 100) {
+        } else {
             System.out.println("Зеленый");
         }
     }

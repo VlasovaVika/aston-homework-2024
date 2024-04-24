@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) {
         Methods.printThreeWords();
         Methods.checkSumSign(2, -2);
-        Methods.printColor(-3);
+        Methods.printColor(102);
         Methods.compareNumbers(-1, 0);
         Methods.isSumOfIntsInThisRange(12, 12);
         Methods.compareWithZero(2);
