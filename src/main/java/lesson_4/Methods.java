@@ -1,3 +1,5 @@
+package lesson_4;
+
 public class Methods {
     public static void printThreeWords() {
         System.out.println("Orange");
