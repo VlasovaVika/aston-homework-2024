@@ -1,16 +1,16 @@
 package lesson_6;
 
 public class Park {
-    public static class Attraction {
+    public class Attraction {
         private String name;
-        private String startOfWorking;
-        private String finishOfWorking;
+        private String startWork;
+        private String finishWork;
         private int cost;
 
-        public Attraction(String name, String startOfWorking, String finishOfWorking, int cost) {
+        public Attraction(String name, String startWork, String finishWork, int cost) {
             this.name = name;
-            this.startOfWorking = startOfWorking;
-            this.finishOfWorking = finishOfWorking;
+            this.startWork = startWork;
+            this.finishWork = finishWork;
             this.cost = cost;
         }
 
@@ -18,8 +18,8 @@ public class Park {
         public String toString() {
             return "Attraction{" +
                     "name='" + name + '\'' +
-                    ", startOfWorking='" + startOfWorking + '\'' +
-                    ", finifhOfWorking='" + finishOfWorking + '\'' +
+                    ", startWork ='" + startWork + '\'' +
+                    ", finishWork ='" + finishWork + '\'' +
                     ", cost=" + cost +
                     '}';
         }
