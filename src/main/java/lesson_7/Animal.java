@@ -20,4 +20,9 @@ public class Animal {
     public void swim(int length) {
         System.out.println(name + " swam " + length + " m");
     }
+
+    @Override
+    public String toString() {
+        return "name = " + name + ", ";
+    }
 }
