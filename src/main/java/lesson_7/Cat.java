@@ -28,13 +28,6 @@ public class Cat extends Animal {
         System.out.println("Cat can't swim");
     }
 
-    /*public void eatFromBowl(int foodInBowl, int foodWichCatWantsToEat) {
-        if (foodInBowl >= foodWichCatWantsToEat) {
-            System.out.println("Cat is eating");
-        } else {
-            System.out.println("There isn't enough food in bowl");
-        }
-    }*/
     public boolean isFull() {
         return isFull;
     }
@@ -43,9 +36,10 @@ public class Cat extends Animal {
         isFull = full;
     }
 
-    public void eatFromBowl(int foodInBowl, int foodWichCatWantsToEat, Cat cat) {
+    public void eatFromBowl(int foodInBowl, int foodWichCatWantsToEat, Cat cat, Bowl bowl) {
         if (foodInBowl >= foodWichCatWantsToEat) {
             cat.setFull(true);
+            bowl.setFoodInBowl(foodInBowl - foodWichCatWantsToEat);
             System.out.println("Cat is eating");
         } else {
             System.out.println("There isn't enough food in bowl");
