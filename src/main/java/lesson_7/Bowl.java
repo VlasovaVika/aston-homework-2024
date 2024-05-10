@@ -1,7 +1,7 @@
 package lesson_7;
 
 public class Bowl {
-    private static int foodInBowl;
+    private int foodInBowl;
 
     public Bowl(int foodInBowl) {
         this.foodInBowl = foodInBowl;
