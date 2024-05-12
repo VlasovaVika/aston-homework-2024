@@ -2,11 +2,11 @@ package lesson_7.task_1;
 
 public class Cat extends Animal {
     private static int amountOfCats;
-    private boolean isFull = false;
+    private boolean isFull;
 
-    public Cat(String name, boolean isFull) {
+    public Cat(String name) {
         super(name);
-        this.isFull = isFull;
+        this.isFull = false;
         amountOfCats++;
     }
 
