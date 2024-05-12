@@ -1,7 +1,6 @@
 package lesson_7.task_2;
 
 public class Circle implements Figure, Color, Characteristics {
-
     private double radius;
     private String colorOfFilling;
     private String colorOfBorder;
