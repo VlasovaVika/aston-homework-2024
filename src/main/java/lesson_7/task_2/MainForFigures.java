@@ -1,7 +1,5 @@
 package lesson_7.task_2;
 
-import lesson_7.task_1.Cat;
-
 public class MainForFigures {
     public static void main(String[] args) {
         Circle circle1 = new Circle(33);
