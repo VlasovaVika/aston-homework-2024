@@ -43,9 +43,4 @@ public class Triangle implements Figure, Color, Characteristics {
     public String getColorOfBorder() {
         return colorOfBorder;
     }
-
-    @Override
-    public String printAllCharacteristics() {
-        return Characteristics.super.printAllCharacteristics();
-    }
 }
