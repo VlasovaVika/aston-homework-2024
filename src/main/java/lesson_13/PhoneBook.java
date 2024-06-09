@@ -1,16 +1,26 @@
 package lesson_13;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class PhoneBook {
-    public static void main(String[] args) {
-        Map<String, String> phoneBook = new HashMap<>();
-        phoneBook.put("11-22-33", "Ivanov");
-        phoneBook.put("14-23-37", "Ivanov");
-        phoneBook.put("11-31-54", "Petrov");
-        phoneBook.put("17-55-33", "Sidorov");
-        phoneBook.put("67-22-38", "Kaspersky");
-        System.out.println(SearchMethod.searchPersonWithSurname(phoneBook,"Ivanov"));
+    private String phone;
+    private String surname;
+    private Map<String, String> phoneBook = new HashMap<>();
+
+    public void addPhoneAndSurname(Map<String, String> phoneBook, String phone, String surname) {
+        phoneBook.put(phone, surname);
+    }
+
+    public List<String> getPhones(Map<String, String> phoneBook, String surname) {
+        List<String> phones = new ArrayList<>();
+        for (Map.Entry<String, String> entry : phoneBook.entrySet()) {
+            if (entry.getValue().equals(surname)) {
+                phones.add(entry.getKey());
+            }
+        }
+        return phones;
     }
 }
