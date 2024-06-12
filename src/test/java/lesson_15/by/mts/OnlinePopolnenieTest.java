@@ -7,9 +7,8 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class OnlinePopolnenieTest extends BaseTest {
-    OnlinePopolnenieObject onlinePopolnenieObject = new OnlinePopolnenieObject(driver);
     @Test
-    @DisplayName("name of block")
+    @DisplayName("task 1 - name of block")
     public void checkNameOfBlock() {
         OnlinePopolnenieObject onlinePopolnenieObject = new OnlinePopolnenieObject(driver);
         Assertions.assertEquals("Онлайн пополнение\n" + "без комиссии",
@@ -17,7 +16,7 @@ public class OnlinePopolnenieTest extends BaseTest {
     }
 
     @Test
-    @DisplayName("visibility of logos")
+    @DisplayName("task 2 - visibility of logos")
     public void checkVisibilityOfLogos() {
         OnlinePopolnenieObject onlinePopolnenieObject = new OnlinePopolnenieObject(driver);
         assertAll(
@@ -27,5 +26,18 @@ public class OnlinePopolnenieTest extends BaseTest {
                 () -> assertTrue(onlinePopolnenieObject.checkVisibilityOfMastercardSecureCode()),
                 () -> assertTrue(onlinePopolnenieObject.checkVisibilityOfBelcard())
         );
+    }
+    @Test
+    @DisplayName("task 3 - link of payment order")
+    public void testLink(){
+        OnlinePopolnenieObject onlinePopolnenieObject = new OnlinePopolnenieObject(driver);
+        onlinePopolnenieObject.clickLinkOfPayingOrder();
+        Assertions.assertEquals("Порядок оплаты и безопасность интернет платежей",
+                onlinePopolnenieObject.getTitleOfPageWithPayingOrder());
+    }
+    @Test
+    @DisplayName("task 4 - services of communication")
+    public void testPaymentOFCommunicationServices(){
+
     }
 }

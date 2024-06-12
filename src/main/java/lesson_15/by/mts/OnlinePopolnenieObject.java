@@ -28,5 +28,11 @@ public class OnlinePopolnenieObject {
     public boolean checkVisibilityOfBelcard(){
         return driver.findElement(By.xpath(OnlinePopolnenieLocators.PAY_PARTNER_BELCARD)).isDisplayed();
     }
+    public void clickLinkOfPayingOrder(){
+        driver.findElement(By.xpath(OnlinePopolnenieLocators.LINK_ABOUT_SERVICES)).click();
+    }
+    public String getTitleOfPageWithPayingOrder(){
+        return driver.findElement(By.xpath(OnlinePopolnenieLocators.TITLE_OF_PAGE_PAYMENT_ORDER)).getText();
+    }
 
 }

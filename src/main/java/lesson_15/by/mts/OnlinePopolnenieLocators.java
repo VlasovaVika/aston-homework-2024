@@ -11,4 +11,6 @@ public class OnlinePopolnenieLocators {
     public static final String PAY_PARTNER_MASTERCARD_SECURE_CODE = "//div[@class='pay__partners']/ul/li/img[@alt='MasterCard Secure Code']";
 
     public static final String PAY_PARTNER_BELCARD = "//div[@class='pay__partners']/ul/li/img[@alt='Белкарт']";
+    public static final String LINK_ABOUT_SERVICES = "//div[@class='pay__wrapper']/a";
+    public static final String TITLE_OF_PAGE_PAYMENT_ORDER= "//span[@class='breadcrumbs__link']/span";
 }
