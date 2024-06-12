@@ -12,5 +12,9 @@ public class OnlinePopolnenieLocators {
 
     public static final String PAY_PARTNER_BELCARD = "//div[@class='pay__partners']/ul/li/img[@alt='Белкарт']";
     public static final String LINK_ABOUT_SERVICES = "//div[@class='pay__wrapper']/a";
-    public static final String TITLE_OF_PAGE_PAYMENT_ORDER= "//span[@class='breadcrumbs__link']/span";
+    public static final String TITLE_OF_PAGE_PAYMENT_ORDER = "//span[@class='breadcrumbs__link']/span";
+    public static final String CONNECTION_PHONE_ID = "connection-phone";
+    public static final String CONNECTION_SUM_ID = "connection-sum";
+    public static final String BTN_CONTINUE = "//button[text()='Продолжить']";
+    public static final String PAY_DESCRIPTION_TEXT = "//span[contains(@class, 'pay-description__text')]";
 }

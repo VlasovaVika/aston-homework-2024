@@ -34,5 +34,9 @@ public class OnlinePopolnenieObject {
     public String getTitleOfPageWithPayingOrder(){
         return driver.findElement(By.xpath(OnlinePopolnenieLocators.TITLE_OF_PAGE_PAYMENT_ORDER)).getText();
     }
-
+    public void sendPhoneAndSumAndClickContinue(){
+        driver.findElement(By.id(OnlinePopolnenieLocators.CONNECTION_PHONE_ID)).sendKeys("297777777");
+        driver.findElement(By.id(OnlinePopolnenieLocators.CONNECTION_SUM_ID)).sendKeys("1");
+        driver.findElement(By.xpath(OnlinePopolnenieLocators.BTN_CONTINUE)).click();
+    }
 }

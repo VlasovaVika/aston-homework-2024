@@ -3,6 +3,8 @@ package lesson_15.by.mts;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -37,7 +39,14 @@ public class OnlinePopolnenieTest extends BaseTest {
     }
     @Test
     @DisplayName("task 4 - services of communication")
-    public void testPaymentOFCommunicationServices(){
+    public void testButtonForPaymentOFCommunicationServices(){
+        OnlinePopolnenieObject onlinePopolnenieObject = new OnlinePopolnenieObject(driver);
+        onlinePopolnenieObject.sendPhoneAndSumAndClickContinue();
+        //не нашла локатор стабильный для pay_description
+        WebElement iframe = driver.findElement(By.xpath("//iframe[@class='gpay-card-info-iframe gpay-card-info-iframe-fade-in']"));
 
+
+        Assertions.assertEquals("Оплата: Услуги связи Номер:375297777777",
+                driver.findElement(By.xpath(OnlinePopolnenieLocators.PAY_DESCRIPTION_TEXT)).getText());
     }
 }
