@@ -43,10 +43,9 @@ public class OnlinePopolnenieTest extends BaseTest {
         OnlinePopolnenieObject onlinePopolnenieObject = new OnlinePopolnenieObject(driver);
         onlinePopolnenieObject.sendPhoneAndSumAndClickContinue();
         //не нашла локатор стабильный для pay_description
-        WebElement iframe = driver.findElement(By.xpath("//iframe[@class='gpay-card-info-iframe gpay-card-info-iframe-fade-in']"));
-
-
+        WebElement iframe = driver.findElement(By.xpath("//iframe[@class='bepaid-iframe']"));
         Assertions.assertEquals("Оплата: Услуги связи Номер:375297777777",
-                driver.findElement(By.xpath(OnlinePopolnenieLocators.PAY_DESCRIPTION_TEXT)).getText());
+                driver.switchTo().frame(iframe).
+                findElement(By.xpath(OnlinePopolnenieLocators.PAY_DESCRIPTION_TEXT)).getText());
     }
 }
