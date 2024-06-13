@@ -17,4 +17,5 @@ public class OnlinePopolnenieLocators {
     public static final String CONNECTION_SUM_ID = "connection-sum";
     public static final String BTN_CONTINUE = "//button[text()='Продолжить']";
     public static final String PAY_DESCRIPTION_TEXT = "//span[contains(@class, 'pay-description__text')]";
+    public static final String IFRAME = "//iframe[@class='bepaid-iframe']";
 }

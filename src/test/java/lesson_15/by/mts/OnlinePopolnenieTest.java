@@ -3,8 +3,6 @@ package lesson_15.by.mts;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -29,23 +27,23 @@ public class OnlinePopolnenieTest extends BaseTest {
                 () -> assertTrue(onlinePopolnenieObject.checkVisibilityOfBelcard())
         );
     }
+
     @Test
     @DisplayName("task 3 - link of payment order")
-    public void testLink(){
+    public void testLink() {
         OnlinePopolnenieObject onlinePopolnenieObject = new OnlinePopolnenieObject(driver);
         onlinePopolnenieObject.clickLinkOfPayingOrder();
         Assertions.assertEquals("Порядок оплаты и безопасность интернет платежей",
                 onlinePopolnenieObject.getTitleOfPageWithPayingOrder());
     }
+
     @Test
     @DisplayName("task 4 - services of communication")
-    public void testButtonForPaymentOFCommunicationServices(){
+    public void testButtonForPaymentOFCommunicationServices() {
         OnlinePopolnenieObject onlinePopolnenieObject = new OnlinePopolnenieObject(driver);
         onlinePopolnenieObject.sendPhoneAndSumAndClickContinue();
-        //не нашла локатор стабильный для pay_description
-        WebElement iframe = driver.findElement(By.xpath("//iframe[@class='bepaid-iframe']"));
+        onlinePopolnenieObject.openFrameAndFindLocatorWithPayDescription();
         Assertions.assertEquals("Оплата: Услуги связи Номер:375297777777",
-                driver.switchTo().frame(iframe).
-                findElement(By.xpath(OnlinePopolnenieLocators.PAY_DESCRIPTION_TEXT)).getText());
+                onlinePopolnenieObject.getPayDescriptionTest());
     }
 }
