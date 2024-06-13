@@ -44,6 +44,6 @@ public class OnlinePopolnenieTest extends BaseTest {
         onlinePopolnenieObject.sendPhoneAndSumAndClickContinue();
         onlinePopolnenieObject.openFrameAndFindLocatorWithPayDescription();
         Assertions.assertEquals("Оплата: Услуги связи Номер:375297777777",
-                onlinePopolnenieObject.getPayDescriptionTest());
+                onlinePopolnenieObject.getPayDescriptionText());
     }
 }

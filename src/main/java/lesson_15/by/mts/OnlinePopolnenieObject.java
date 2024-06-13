@@ -60,7 +60,7 @@ public class OnlinePopolnenieObject {
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(OnlinePopolnenieLocators.PAY_DESCRIPTION_TEXT))));
     }
 
-    public String getPayDescriptionTest() {
+    public String getPayDescriptionText() {
         return driver.findElement(By.xpath(OnlinePopolnenieLocators.PAY_DESCRIPTION_TEXT)).getText();
     }
 }
