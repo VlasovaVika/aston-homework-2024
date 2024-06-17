@@ -16,11 +16,17 @@ public class UslugiSvyaziPage {
     }
 
     OplataUslugPage oplataUslugPage = new OplataUslugPage(driver);
-    public String connectionPhoneId = "connection-phone";
-    public String connectionSumId = "connection-sum";
-    public String btnContinue = "//button[text()='Продолжить']";
-    public String payDescriptionText = "//span[contains(@class, 'pay-description__text')]";
-    public String iframe = "//iframe[@class='bepaid-iframe']";
+    private String connectionPhoneId = "connection-phone";
+    private String connectionSumId = "connection-sum";
+    private String btnContinue = "//button[text()='Продолжить']";
+    private String payDescriptionText = "//span[contains(@class, 'pay-description__text')]";
+    private String iframe = "//iframe[@class='bepaid-iframe']";
+    private String payDescriptionCost = "//div[@class='pay-description__cost']/span";
+    private String payBtn = "//div[@class='card-page__card']/button";
+    private String creditCardNumber = "//div[@class=\"app-input ng-tns-c46-1\"]/div/div/label";
+    private String srokDeistviya  = "//div[@class='app-input ng-tns-c46-4']/div/div/label";
+    private String imyaDerzhatelya = "//div[@class=\"app-input ng-tns-c46-3\"]/div/div/label";
+    private String cvc ="//div[@class='app-input ng-tns-c46-5']/div/div/label";
 
     public void sendPhoneAndSumAndClickContinue(String sumOfByn) {
         driver.findElement(By.id(connectionPhoneId)).sendKeys("297777777");
@@ -37,5 +43,24 @@ public class UslugiSvyaziPage {
 
     public String getPayDescriptionText() {
         return driver.findElement(By.xpath(payDescriptionText)).getText();
+    }
+
+    public String getPayDescriptionCost() {
+        return driver.findElement(By.xpath(payDescriptionCost)).getText();
+    }
+    public String getPayBtnText(){
+        return driver.findElement(By.xpath(payBtn)).getText();
+    }
+    public String getCreditCardNumberWhenEmpty(){
+        return driver.findElement(By.xpath(creditCardNumber)).getText();
+    }
+    public String getSrokDeistviyaWhenEmpty(){
+        return driver.findElement(By.xpath(srokDeistviya)).getText();
+    }
+    public String getImyaDerzhatelyaWhenEmpty(){
+        return driver.findElement(By.xpath(imyaDerzhatelya)).getText();
+    }
+    public String getCvcWhenEmpty(){
+        return driver.findElement(By.xpath(cvc)).getText();
     }
 }
