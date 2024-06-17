@@ -14,8 +14,6 @@ public class UslugiSvyaziPage {
     public UslugiSvyaziPage(WebDriver driver) {
         this.driver = driver;
     }
-
-    OplataUslugPage oplataUslugPage = new OplataUslugPage(driver);
     private String connectionPhoneId = "connection-phone";
     private String connectionSumId = "connection-sum";
     private String btnContinue = "//button[text()='Продолжить']";
@@ -27,7 +25,9 @@ public class UslugiSvyaziPage {
     private String srokDeistviya  = "//div[@class='app-input ng-tns-c46-4']/div/div/label";
     private String imyaDerzhatelya = "//div[@class=\"app-input ng-tns-c46-3\"]/div/div/label";
     private String cvc ="//div[@class='app-input ng-tns-c46-5']/div/div/label";
-
+    private String mastercargLogo = "//div[@class=\"cards-brands cards-brands__container ng-tns-c61-0 ng-trigger ng-trigger-brandsState ng-star-inserted\"]/img[1]";
+    private String visaLogo = "//div[@class=\"cards-brands cards-brands__container ng-tns-c61-0 ng-trigger ng-trigger-brandsState ng-star-inserted\"]/img[2]";
+    private String belcardLogo = "//div[@class=\"cards-brands cards-brands__container ng-tns-c61-0 ng-trigger ng-trigger-brandsState ng-star-inserted\"]/img[3]";
     public void sendPhoneAndSumAndClickContinue(String sumOfByn) {
         driver.findElement(By.id(connectionPhoneId)).sendKeys("297777777");
         driver.findElement(By.id(connectionSumId)).sendKeys(sumOfByn);
@@ -62,5 +62,14 @@ public class UslugiSvyaziPage {
     }
     public String getCvcWhenEmpty(){
         return driver.findElement(By.xpath(cvc)).getText();
+    }
+    public boolean checkMastercardLogo(){
+        return driver.findElement(By.xpath(mastercargLogo)).isDisplayed();
+    }
+    public boolean checkVisaLogo(){
+        return driver.findElement(By.xpath(visaLogo)).isDisplayed();
+    }
+    public boolean checkBelcardLogo(){
+        return driver.findElement(By.xpath(belcardLogo)).isDisplayed();
     }
 }

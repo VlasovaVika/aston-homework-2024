@@ -19,7 +19,10 @@ public class UslugiSvyaziTest extends BaseTest {
                 ()->assertEquals("Номер карты", uslugiSvyaziPage.getCreditCardNumberWhenEmpty()),
                 ()->assertEquals("Срок действия",uslugiSvyaziPage.getSrokDeistviyaWhenEmpty()),
                 ()->assertEquals("Имя держателя (как на карте)",uslugiSvyaziPage.getImyaDerzhatelyaWhenEmpty()),
-                ()->assertEquals("CVC",uslugiSvyaziPage.getCvcWhenEmpty())
+                ()->assertEquals("CVC",uslugiSvyaziPage.getCvcWhenEmpty()),
+                ()->assertTrue(uslugiSvyaziPage.checkMastercardLogo()),
+                ()->assertTrue(uslugiSvyaziPage.checkVisaLogo()),
+                ()->assertTrue(uslugiSvyaziPage.checkBelcardLogo())
         );
     }
 }
