@@ -22,15 +22,16 @@ public class OplataUslugTest extends BaseTest {
                         oplataUslugPage.getAttributeEmail())
         );
     }
+
     @Test
     @DisplayName("Domashniy Internet")
-    public void testDomashnegoUnterneta(){
+    public void testDomashnegoUnterneta() {
         OplataUslugPage oplataUslugPage = new OplataUslugPage(driver);
         oplataUslugPage.clickSelectedNowBtn();
         oplataUslugPage.clickDomashnyiInternetBtn();
         assertAll(
                 () -> assertEquals("Домашний интернет",
-                       oplataUslugPage.getTextVibranoiUslugi()),
+                        oplataUslugPage.getTextVibranoiUslugi()),
                 () -> assertEquals("Номер абонента",
                         oplataUslugPage.getAttributeInternetPhone()),
                 () -> assertEquals("Сумма",
@@ -39,9 +40,10 @@ public class OplataUslugTest extends BaseTest {
                         oplataUslugPage.getAttributeEmail())
         );
     }
+
     @Test
     @DisplayName("Rassrochka")
-    public void testRassrochki(){
+    public void testRassrochki() {
         OplataUslugPage oplataUslugPage = new OplataUslugPage(driver);
         oplataUslugPage.clickSelectedNowBtn();
         oplataUslugPage.clickRassrochkaBtn();
@@ -56,9 +58,10 @@ public class OplataUslugTest extends BaseTest {
                         oplataUslugPage.getAttributeEmail())
         );
     }
+
     @Test
     @DisplayName("Zadolzhennost")
-    public void testZadolzhennosti(){
+    public void testZadolzhennosti() {
         OplataUslugPage oplataUslugPage = new OplataUslugPage(driver);
         oplataUslugPage.clickSelectedNowBtn();
         oplataUslugPage.clickZadolzhennostBtn();

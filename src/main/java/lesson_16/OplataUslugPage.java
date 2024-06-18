@@ -14,11 +14,11 @@ public class OplataUslugPage {
     private String phoneId = "connection-phone";
     private String sumId = "connection-sum";
     private String emailId = "connection-email";
-    private String domashnyiInternet = "//ul[@class=\"select__list\"]/li[2]";
+    private String domashnyiInternet = "//ul[@class='select__list']/li/p[contains(text(),'Домашний интернет')]";
     private String internetPhoneId = "internet-phone";
-    private String rassrochka = "//ul[@class=\"select__list\"]/li[3]";
+    private String rassrochka = "//ul[@class='select__list']/li/p[contains(text(),'Рассрочка')]";
     private String scoreInstalmentId = "score-instalment";
-    private String zadolzhennost = "//ul[@class=\"select__list\"]/li[4]";
+    private String zadolzhennost = "//ul[@class='select__list']/li/p[contains(text(),'Задолженность')]";
     private String scoreArrears = "score-arrears";
 
     public String getTextVibranoiUslugi() {
