@@ -9,9 +9,10 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class RequestMethodsTest {
     @BeforeEach
-    public void setUp(){
+    public void setUp() {
         request(baseURI = "https://postman-echo.com/");
     }
+
     @Test
     @DisplayName("GET Request")
     public void testGetRequest() {
@@ -57,21 +58,21 @@ public class RequestMethodsTest {
 
     @Test
     @DisplayName("PUT Request")
-    public void testPutRequest(){
+    public void testPutRequest() {
         String response = "This is expected to be sent back as part of response body.";
-    given()
-            .contentType("text/plain")
-            .body(response)
-            .when()
-            .put("/put")
-            .then()
-            .assertThat().statusCode(200)
-            .body("data", equalTo(response));
+        given()
+                .contentType("text/plain")
+                .body(response)
+                .when()
+                .put("/put")
+                .then()
+                .assertThat().statusCode(200)
+                .body("data", equalTo(response));
     }
 
     @Test
     @DisplayName("PATCH Request")
-    public void testPatchRequest(){
+    public void testPatchRequest() {
         String response = "This is expected to be sent back as part of response body.";
         given()
                 .contentType("text/plain")
@@ -85,7 +86,7 @@ public class RequestMethodsTest {
 
     @Test
     @DisplayName("DELETE Request")
-    public void testDeleteRequest(){
+    public void testDeleteRequest() {
         given()
                 .contentType("text/plain")
                 .body("This is expected to be sent back as part of response body.")
