@@ -1,17 +1,21 @@
 package lesson_17.postman_ehco;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.equalTo;
 
 public class RequestMethodsTest {
+    @BeforeEach
+    public void setUp(){
+        request(baseURI = "https://postman-echo.com/");
+    }
     @Test
     @DisplayName("GET Request")
     public void testGetRequest() {
         given()
-                .baseUri("https://postman-echo.com/")
                 .queryParam("foo1", "bar1")
                 .queryParam("foo2", "bar2")
                 .when()
@@ -25,22 +29,21 @@ public class RequestMethodsTest {
     @Test
     @DisplayName("POST Raw Text")
     public void testPostRawText() {
+        String response = "This is expected to be sent back as part of response body.";
         given()
-                .baseUri("https://postman-echo.com/")
                 .contentType("text/plain")
-                .body("This is expected to be sent back as part of response body.")
+                .body(response)
                 .when()
                 .post("/post")
                 .then()
                 .assertThat().statusCode(200)
-                .body("data", equalTo("This is expected to be sent back as part of response body."));
+                .body("data", equalTo(response));
     }
 
     @Test
     @DisplayName("POST Form Data")
     public void testPostFormData() {
         given()
-                .baseUri("https://postman-echo.com/")
                 .contentType("application/x-www-form-urlencoded; charset=utf-8")
                 .formParam("foo1", "bar1")
                 .formParam("foo2", "bar2")
@@ -55,20 +58,40 @@ public class RequestMethodsTest {
     @Test
     @DisplayName("PUT Request")
     public void testPutRequest(){
+        String response = "This is expected to be sent back as part of response body.";
     given()
-            .baseUri("https://postman-echo.com/")
             .contentType("text/plain")
-            .body("This is expected to be sent back as part of response body.")
+            .body(response)
             .when()
             .put("/put")
             .then()
             .assertThat().statusCode(200)
-            .body("data", equalTo("This is expected to be sent back as part of response body."));
+            .body("data", equalTo(response));
     }
 
     @Test
     @DisplayName("PATCH Request")
     public void testPatchRequest(){
+        String response = "This is expected to be sent back as part of response body.";
+        given()
+                .contentType("text/plain")
+                .body(response)
+                .when()
+                .patch("/patch")
+                .then()
+                .assertThat().statusCode(200)
+                .body("data", equalTo(response));
+    }
 
+    @Test
+    @DisplayName("DELETE Request")
+    public void testDeleteRequest(){
+        given()
+                .contentType("text/plain")
+                .body("This is expected to be sent back as part of response body.")
+                .when()
+                .delete("/delete")
+                .then()
+                .statusCode(200);
     }
 }
